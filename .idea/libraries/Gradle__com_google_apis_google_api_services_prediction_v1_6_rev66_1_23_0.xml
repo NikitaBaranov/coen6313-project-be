@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.apis:google-api-services-prediction:v1.6-rev66-1.23.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.apis/google-api-services-prediction/v1.6-rev66-1.23.0/42d6a0d3447ede7e5defc1ec2d638e78f8841f89/google-api-services-prediction-v1.6-rev66-1.23.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.apis/google-api-services-prediction/v1.6-rev66-1.23.0/f931c239f70afd410a4cea8316d5430c191e5da7/google-api-services-prediction-v1.6-rev66-1.23.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

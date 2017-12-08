@@ -1,0 +1,59 @@
+group = 'com.NikitaBaranov'
+
+buildscript {
+	ext {
+		springBootVersion = '1.5.8.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath('se.transmode.gradle:gradle-docker:1.2')
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'docker'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+jar {
+	baseName = 'coen6313-project'
+	version =  '0.1.0'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-data-mongodb')
+	compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.9.1'
+	compile 'com.google.cloud:google-cloud-vision:1.12.0'
+	compile group: 'com.google.api-client', name: 'google-api-client', version: '1.23.0'
+	compile group: 'com.google.apis', name: 'google-api-services-prediction', version: 'v1.6-rev66-1.23.0'
+	compile group: 'com.google.oauth-client', name: 'google-oauth-client-java6', version: '1.23.0'
+	compile group: 'com.google.oauth-client', name: 'google-oauth-client-jetty', version: '1.23.0'
+	compile 'com.nimbusds:nimbus-jose-jwt:5.1'
+	compile 'io.jsonwebtoken:jjwt:0.9.0'
+	compile 'com.google.apis:google-api-services-ml:v1-rev24-1.23.0'
+	compile 'com.google.apis:google-api-services-discovery:v1-rev61-1.23.0'
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+task buildDocker(type: Docker, dependsOn: build) {
+	applicationName = jar.baseName
+	dockerfile = file('src/main/Docker/Dockerfile')
+	doFirst {
+		copy {
+			from jar
+			into "${stageDir}/target"
+		}
+	}
+}

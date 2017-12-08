@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.apis:google-api-services-discovery:v1-rev61-1.23.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.apis/google-api-services-discovery/v1-rev61-1.23.0/bae29d833224591802ee0763cf5edd674747350a/google-api-services-discovery-v1-rev61-1.23.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.apis/google-api-services-discovery/v1-rev61-1.23.0/87aa942254494c5217a35854895c69fd72c0aa9/google-api-services-discovery-v1-rev61-1.23.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
